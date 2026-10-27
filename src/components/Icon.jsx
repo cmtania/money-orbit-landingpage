@@ -1,0 +1,66 @@
+import {
+  AppleLogo,
+  ArrowRight,
+  ArrowsLeftRight,
+  Bank,
+  CalendarBlank,
+  ChartDonut,
+  ChartLineUp,
+  Check,
+  Cpu,
+  CreditCard,
+  CurrencyCircleDollar,
+  DeviceMobile,
+  Export,
+  ForkKnife,
+  List,
+  LockSimple,
+  Plus,
+  Receipt,
+  ScanSmiley,
+  ShieldCheck,
+  ShoppingBag,
+  Sparkle,
+  Target,
+  TextAa,
+  Users,
+  Wallet,
+  X,
+} from '@phosphor-icons/react';
+
+// The app draws filled SF Symbols; Phosphor's fill weight is the closest web match.
+const ICONS = {
+  apple: AppleLogo,
+  arrow: ArrowRight,
+  transfer: ArrowsLeftRight,
+  bank: Bank,
+  calendar: CalendarBlank,
+  donut: ChartDonut,
+  chart: ChartLineUp,
+  check: Check,
+  cpu: Cpu,
+  card: CreditCard,
+  currency: CurrencyCircleDollar,
+  phone: DeviceMobile,
+  export: Export,
+  dining: ForkKnife,
+  menu: List,
+  lock: LockSimple,
+  plus: Plus,
+  receipt: Receipt,
+  face: ScanSmiley,
+  shield: ShieldCheck,
+  bag: ShoppingBag,
+  sparkle: Sparkle,
+  target: Target,
+  text: TextAa,
+  split: Users,
+  wallet: Wallet,
+  x: X,
+};
+
+export default function Icon({ name, size = 20, weight = 'fill', className, ...rest }) {
+  const Glyph = ICONS[name];
+  if (!Glyph) return null;
+  return <Glyph size={size} weight={weight} className={className} aria-hidden="true" {...rest} />;
+}

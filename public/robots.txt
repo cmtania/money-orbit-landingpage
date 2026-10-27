@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moneyorbit.guruchanworks.com/sitemap.xml
